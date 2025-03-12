@@ -1,0 +1,45 @@
+git init
+- За иницијализација на git во локалниот директориум
+
+git remote add origin https://github.com/MallevS/SI_2025_lab1_203188.git
+- за додавање на remote repository
+
+echo "Стојан Малев 203188" > README.md
+git add README.md
+git commit -m "Initial commit"
+- за додавање на README file со име и презиме и индекс и исто така првиот иницијален commit
+
+git add SI2025Lab1Main.java
+git commit -m "Add starter code"
+- додавање на JAVA кодот од задачата
+
+git push origin master
+- синхронизација на оддалечениот репозиториум
+
+git checkout -b 2-find-all-completed-tasks
+git checkout -b 7-count-tasks-per-category
+git checkout -b 9-mark-all-tasks-in-a-category-as-completed
+git add .
+git commit -m "Implement count tasks per category"
+git add .
+git commit -m "Implement find all completed tasks"
+git add .
+git commit -m "Implement mark all tasks in a category as completed"
+git push origin master
+git checkout master
+git merge 2-find-all-completed-tasks
+git push origin master
+git checkout master
+git merge 7-count-tasks-per-category
+git push origin master
+git checkout master
+git merge 9-mark-all-tasks-in-a-category-as-completed
+git push origin master
+- префрлување и креирање на нови бренчови со цел да се имплементираат и додадат новите features во посебен branch
+
+git log --oneline --graph --all
+- за генерирање на git log
+
+git add logs.txt 203188.txt
+git commit -m "Final commit"
+- додавање на новите фајлови logs.txt и 203188.txt како финален commit
